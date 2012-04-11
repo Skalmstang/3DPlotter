@@ -6,7 +6,7 @@ import javax.vecmath.Color3f;
 import munk.graph.gui.ColorIcon;
 
 public class Colors {
-	
+
 	public static final Color3f RED = new Color3f(1, 0, 0);
 	public static final Color3f YELLOW	 = new Color3f(1, 1, 0);
 	public static final Color3f ORANGE	 = new Color3f(1, 0.6f, 0);
@@ -22,21 +22,49 @@ public class Colors {
 	/*
 	 * Render an array of icons of all available colors.
 	 */
-	
+
+	public static Color3f[] getAllColors() {
+		return new Color3f[]{
+				Colors.RED,
+				Colors.YELLOW,
+				Colors.ORANGE,
+				Colors.SKYBLUE,
+				Colors.INDIGO,
+				Colors.GREEN,
+				Colors.CYAN,
+				Colors.BLUE,
+				Colors.MAGENTA,
+				Colors.PINK,
+				Colors.TURQUISE};
+	}
+
 	public static Icon[] getIconColors(){
-		return new Icon[]{new ColorIcon(Colors.RED),
-				new ColorIcon(Colors.YELLOW),
-				new ColorIcon(Colors.ORANGE),
-				new ColorIcon(Colors.SKYBLUE),
-				new ColorIcon(Colors.INDIGO),
-				new ColorIcon(Colors.GREEN),
-				new ColorIcon(Colors.CYAN),
-				new ColorIcon(Colors.BLUE),
-				new ColorIcon(Colors.MAGENTA),
-				new ColorIcon(Colors.PINK),
-				new ColorIcon(Colors.TURQUISE)};
+		Color3f[] colorList = getAllColors();
+		ColorIcon[] iconList = new ColorIcon[colorList.length];
+		for (int i = 0; i < colorList.length ; i++) {
+			iconList[i] = new ColorIcon(colorList[i]);
+		}
+		return iconList;
+//		return new Icon[]{new ColorIcon(Colors.RED),
+//				new ColorIcon(Colors.YELLOW),
+//				new ColorIcon(Colors.ORANGE),
+//				new ColorIcon(Colors.SKYBLUE),
+//				new ColorIcon(Colors.INDIGO),
+//				new ColorIcon(Colors.GREEN),
+//				new ColorIcon(Colors.CYAN),
+//				new ColorIcon(Colors.BLUE),
+//				new ColorIcon(Colors.MAGENTA),
+//				new ColorIcon(Colors.PINK),
+//				new ColorIcon(Colors.TURQUISE)};
 	}
 	
+//	public Array<ColorIcon> ColorIcon(Array<Colors> colorList) {
+//	Colors[] iconColors = new Colors[colorList];
+//	for (i ; i < colorList. ; i++) {
+//		
+//	}
+//}
+
 	/*
 	 * Get the color index.
 	 */

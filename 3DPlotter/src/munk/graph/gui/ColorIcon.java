@@ -21,6 +21,9 @@ public class ColorIcon extends ImageIcon {
 		this.setImage(bI);
 	}
 	
+
+	
+	
 	public Color3f getColor(){
 		return color;
 	}
