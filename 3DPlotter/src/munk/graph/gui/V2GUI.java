@@ -439,7 +439,7 @@ public class V2GUI {
 		gbc_equation.gridy = 1;
 		inputPanel.add(equation, gbc_equation);
 		
-		JComboBox<Icon> colors = new JComboBox<Icon>(Colors.getAllColors());
+		JComboBox<Icon> colors = new JComboBox<Icon>(Colors.getIconColors());
 		GridBagConstraints gbc_colors = new GridBagConstraints();
 		gbc_colors.insets = new Insets(0, 0, 0, 5);
 		gbc_colors.anchor = GridBagConstraints.NORTHWEST;

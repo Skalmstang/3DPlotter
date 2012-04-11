@@ -22,7 +22,8 @@ public class Colors {
 	/*
 	 * Render an array of icons of all available colors.
 	 */
-	public static Icon[] getAllColors(){
+	
+	public static Icon[] getIconColors(){
 		return new Icon[]{new ColorIcon(Colors.RED),
 				new ColorIcon(Colors.YELLOW),
 				new ColorIcon(Colors.ORANGE),
@@ -40,7 +41,7 @@ public class Colors {
 	 * Get the color index.
 	 */
 	public static int getIndex(Color3f color){
-		Icon[] allColors = getAllColors();
+		Icon[] allColors = getIconColors();
 		for(int i = 0; i < allColors.length ; i++){
 			if(((ColorIcon) allColors[i]).getColor().equals(color)) return i;
 		}
