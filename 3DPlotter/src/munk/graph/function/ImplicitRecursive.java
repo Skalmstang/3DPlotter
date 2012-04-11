@@ -320,22 +320,22 @@ public class ImplicitRecursive {
 		corners[5] = prevCorners[6];
 		
 		Point3f corner2 = new Point3f(corners[1]);
-		corner2.y += xStepsize;
+		corner2.y += yStepsize;
 		corners[2] = corner2;
 		values[2] = value(corner2);
 		
 		Point3f corner3 = new Point3f(corners[0]);
-		corner3.y += xStepsize;
+		corner3.y += yStepsize;
 		corners[3] = corner3;
 		values[3] = value(corner3);
 		
 		Point3f corner6 = new Point3f(corners[5]);
-		corner6.y += xStepsize;
+		corner6.y += yStepsize;
 		corners[6] = corner6;
 		values[6] = value(corner6);
 		
 		Point3f corner7 = new Point3f(corners[4]);
-		corner7.y += xStepsize;
+		corner7.y += yStepsize;
 		corners[7] = corner7;
 		values[7] = value(corner7);
 		
